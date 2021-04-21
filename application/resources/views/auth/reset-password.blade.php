@@ -29,7 +29,7 @@
             <div>
                 <x-label
                     for="email"
-                    :value="__('Email')"
+                    :value="__('form_auth.email')"
                 />
 
                 <x-input
@@ -47,7 +47,7 @@
             <div class="mt-4">
                 <x-label
                     for="password"
-                    :value="__('Password')"
+                    :value="__('form_auth.password')"
                 />
 
                 <x-input
@@ -63,7 +63,7 @@
             <div class="mt-4">
                 <x-label
                     for="password_confirmation"
-                    :value="__('Confirm Password')"
+                    :value="__('form_auth.confirmPassword')"
                 />
 
                 <x-input
@@ -77,7 +77,7 @@
 
             <div class="flex items-center justify-end mt-4">
                 <x-button>
-                    {{ __('Reset Password') }}
+                    {{ __('form_auth.resetPassword') }}
                 </x-button>
             </div>
         </form>

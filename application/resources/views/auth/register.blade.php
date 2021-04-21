@@ -22,7 +22,7 @@
             <div>
                 <x-label
                     for="name"
-                    :value="__('Name')"
+                    :value="__('form_auth.name')"
                 />
 
                 <x-input
@@ -40,7 +40,7 @@
             <div class="mt-4">
                 <x-label
                     for="email"
-                    :value="__('Email')"
+                    :value="__('form_auth.email')"
                 />
 
                 <x-input
@@ -57,7 +57,7 @@
             <div class="mt-4">
                 <x-label
                     for="password"
-                    :value="__('Password')"
+                    :value="__('form_auth.password')"
                 />
 
                 <x-input
@@ -74,7 +74,7 @@
             <div class="mt-4">
                 <x-label
                     for="password_confirmation"
-                    :value="__('Confirm Password')"
+                    :value="__('form_auth.confirmPassword')"
                 />
 
                 <x-input
@@ -91,11 +91,11 @@
                     class="underline text-sm text-gray-600 hover:text-gray-900"
                     href="{{ route('login') }}"
                 >
-                    {{ __('Already registered?') }}
+                    {{ __('form_auth.alreadyRegistered') }}
                 </a>
 
                 <x-button class="ml-4">
-                    {{ __('Register') }}
+                    {{ __('form_auth.register') }}
                 </x-button>
             </div>
         </form>

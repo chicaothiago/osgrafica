@@ -1,0 +1,30 @@
+version: "3.8"
+services:
+  # web:
+  #   image: nginx
+  #   container_name: osg-server
+  #   ports: 
+  #     - 9999:80
+  #   volumes: 
+  #     - ./application:/var/www/
+  #     - ./docker-config/nginx:/etc/nginx/config.d/
+  #   working_dir: /var/www
+
+  mongodb:
+    container_name: osg-mongodb
+    image: mongo:4
+    ports: 
+      - 27017:27017
+    restart: always
+    volumes:
+        - ./docker-config/mongodb/data/db:/data/db
+
+  php-alpine:
+    container_name: osg-php
+    build: ./docker-config/php
+    working_dir: /var/www
+    ports:
+      - 9998:8000
+    volumes:
+      - ./application:/var/www
+    command: sh -c "php artisan serve --port=8000 --host=0.0.0.0"

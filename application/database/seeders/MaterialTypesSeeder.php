@@ -2,7 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\MaterialType;
 use Illuminate\Database\Seeder;
+use MongoDB\BSON\ObjectId;
 
 class MaterialTypesSeeder extends Seeder
 {
@@ -13,6 +15,13 @@ class MaterialTypesSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $data = [
+            'tinta',
+            'ribbon',
+        ];
+
+        foreach ($data as $item) {
+            (new MaterialType(['id' => new ObjectId(), 'name' => $item]))->save();
+        }
     }
 }

@@ -7,6 +7,7 @@ class MaterialType extends BaseModel
     protected $collection = 'materialTypes';
 
     protected $fillable = [
+        'id',
         'name',
     ];
 

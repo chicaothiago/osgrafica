@@ -2,7 +2,7 @@ FROM php:8-alpine
 
 RUN apk update
 
-RUN apk add git vim pcre-dev autoconf ldb-dev libldap openldap-dev libxml2-dev libzip openssl zlib-dev libzip-dev
+RUN apk add git vim pcre-dev autoconf ldb-dev libldap openldap-dev libxml2-dev libzip openssl zlib-dev libzip-dev nodejs npm
 
 RUN docker-php-ext-install bcmath ctype fileinfo ldap opcache pdo tokenizer xml zip \ 
     && docker-php-ext-enable bcmath ctype fileinfo ldap opcache pdo tokenizer xml zip
